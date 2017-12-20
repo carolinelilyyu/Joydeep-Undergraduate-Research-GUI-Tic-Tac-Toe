@@ -9,7 +9,7 @@ This repo handles the GUI side for Joydeep's undergraduate research project; als
 
 ## Downloads/Links to help
 - **ZeroMQ/ZMQ** - Platform to connect C++ code to Python code
-[[ZeroMQ download]](http://zeromq.org/area:download)
+[[ZeroMQ]](http://zeromq.org/)
 - **QT Open Source** - Open source framework that uses C++ to make applications and GUIs
 [[QT Open Source download]](https://www1.qt.io/download-open-source/?hsCtaTracking=f977210e-de67-475f-a32b-65cec207fd03%7Cd62710cd-e1db-46aa-8d4d-2f1c1ffdacea)
 - **ScribbleArea** - A QT class that acts as a canvas for the user to draw on a canvas
