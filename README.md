@@ -1,6 +1,6 @@
 # Joydeep-Undergraduate-Research-GUI-Tic-Tac-Toe
 
-This repo handles the GUI side for Joydeep's undergraduate research project; also known as the Human turn. This is written in QT or C++. Communicates with Python or Joydeep-Undergraduate-Research-AI through ZMQ. This documentation will assume you know the basics of C++ of headers and cpp files. Configuring the code to work with your machine will be essential; for example, certain file locations are configured to the creator's desktop: "/User/carolineyu/Documents/....". Change these paths/directories in the code (mainwindow.cpp) to match where your file locations will exist.
+This repo handles the GUI side for Joydeep's undergraduate research project; also known as the Human turn. This is written in QT or C++. Communicates with Python or Joydeep-Undergraduate-Research-AI through ZMQ. This documentation will assume you know the basics of C++ of headers and cpp files. Configuring the code to work with your machine will be essential. For example, certain file locations are configured to the creator's desktop: "/User/carolineyu/Documents/....". Change these paths/directories in the code (mainwindow.cpp) to match where your file locations will exist.
 
 ## Terminology
 - AI: Artificial intelligence: the computer program
