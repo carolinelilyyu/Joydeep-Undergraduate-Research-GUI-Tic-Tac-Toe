@@ -12,11 +12,20 @@ This repo handles the GUI side for Joydeep's undergraduate research project; als
 [[ZeroMQ download]](http://zeromq.org/area:download)
 - **Minimax Algorithm** - A tutorial I followed to implement the minimax algorithm
 [[Minimax Algorithm]](http://www.sarathlakshman.com/2011/04/29/writing-a-tic-tac)
-- **ScirrbleArea** - A QT class that acts as a canvas for the user to draw on a canvas
-## Documentation
+- **ScribbleArea** - A QT class that acts as a canvas for the user to draw on a canvas
+[[ScribbleArea]](http://doc.qt.io/qt-5/qtwidgets-widgets-scribble-example.html)
 
 
 ## How to Play
+1. Press the green play button in the QT IDE.
+2. Draw an X or O in one of the squares. DO NOT DRAW IN MORE THAN ONE SQUARE. Also if the user were to choose O, it must look like the O in the **/train/O/** folder. Please provide more training data and create the model to fit the training data.
+3. Press "CTRL + S" to save the game board. Do not be afraid if the GUI hangs, ZMQ sockets make the GUI hang because it is waiting for the Python code's response. It will automatically save in the folder **/board/** as 9 separate "game(insert square number).png"s.
+4. Start up the python script from Joydeep-Undergraduate-Research-AI inside Pycharm. If the code shows the board state and says "Press Enter to continue...", then the game has moved.
+5. Check back on the GUI. The computer should have moved.
+6. Draw an X or O again
+7. CTRL + S or save the drawing.
+8. Go back to Pycharm IDE and Press Enter.
+9. Repeat steps 5-9.
 
 
 ## How ZMQ works
@@ -24,13 +33,13 @@ In this code, we are using a socket to communicate Python to C++ and vice versa.
 
 ## Structure of Code
 - **Joydeep_Project.pro** handles dependencies, configures ZMQ to your computer
-- **mainwindow.h** the header file to store declarations of private and public variables, methods, slots, and includes for mainwindow.cpp. This also has the #include for *system*, part of C++ that allows it to execute terminal or shell commands without having the user type it in the terminal
+- **mainwindow.h** the header file to store declarations of private and public variables, methods, slots, and includes for mainwindow.cpp. This also has the #include for *system*, part of C++ that allows it to execute terminal or shell commands without having the user type it in the terminal *(however system is making the GUI hang even though it is correctly executing the python script. I commented it out for now and you will have to start up the python script manually)*
 - **scribblearea.h** the header file to store declarations or private and public variables, methods, slots, and includes for scribblearea.cpp
 - **main.cpp**: cpp file for QT application. The bare bones and where the main method exists.
 - **mainwindow.cpp** cpp file for buttons, canvas, menu, buttons, triggers for buttons, etc.
 - **scribblearea.cpp** cpp file for users to draw on canvas and also handles paint events, etc.
 
 
-
 ## Major Bugs
-
+- As said before, *system*, or executing shell/terminal commands within the C++ code makes the GUI hang even though it is correctly executing the python script. You can confirm this because the QT IDE prints out the Python code's print statements, but starts hanging halfway through the execution. I've commented out the command execution code part for now until you choose to uncomment it and play around with it so you'll have to start up the python script manually and press Enter after you draw and save.
+- Code does not play tic tac toe optimally. Please look at the minimax algorithm to debug why it's not doing so. Through the print statements, you can see it trying different game states to see what's the optimal path, but it always just ends up choosing the next available free position, or next square.
