@@ -10,11 +10,12 @@ This repo handles the GUI side for Joydeep's undergraduate research project; als
 ## Downloads/Links to help
 - **ZeroMQ/ZMQ** - Platform to connect C++ code to Python code
 [[ZeroMQ download]](http://zeromq.org/area:download)
-- **Minimax Algorithm** - A tutorial I followed to implement the minimax algorithm
-[[Minimax Algorithm]](http://www.sarathlakshman.com/2011/04/29/writing-a-tic-tac)
+- **QT Open Source** - Open source framework that uses C++ to make applications and GUIs
+[[QT Open Source download]](https://www1.qt.io/download-open-source/?hsCtaTracking=f977210e-de67-475f-a32b-65cec207fd03%7Cd62710cd-e1db-46aa-8d4d-2f1c1ffdacea)
 - **ScribbleArea** - A QT class that acts as a canvas for the user to draw on a canvas
 [[ScribbleArea]](http://doc.qt.io/qt-5/qtwidgets-widgets-scribble-example.html)
-
+- **ZMQ Basics: Hello World for C++**
+[[Hello World C++ ZMQ Example]](http://zguide.zeromq.org/cpp:hwclient)
 
 ## How to Play
 1. Press the green play button in the QT IDE.
@@ -41,5 +42,5 @@ In this code, we are using a socket to communicate Python to C++ and vice versa.
 
 
 ## Major Bugs
-- As said before, *system*, or executing shell/terminal commands within the C++ code makes the GUI hang even though it is correctly executing the python script. You can confirm this because the QT IDE prints out the Python code's print statements, but starts hanging halfway through the execution. I've commented out the command execution code part for now until you choose to uncomment it and play around with it so you'll have to start up the python script manually and press Enter after you draw and save.
-- Code does not play tic tac toe optimally. Please look at the minimax algorithm to debug why it's not doing so. Through the print statements, you can see it trying different game states to see what's the optimal path, but it always just ends up choosing the next available free position, or next square.
+- QT/C++ Bug (GUI): As said before, *system*, or executing shell/terminal commands within the C++ code makes the GUI hang even though it is correctly executing the python script. You can confirm this because the QT IDE prints out the Python code's print statements, but starts hanging halfway through the execution. I've commented out the command execution code part for now until you choose to uncomment it and play around with it so you'll have to start up the python script manually and press Enter after you draw and save. Therefore, this code is not automated.
+- Python Bug (AI): Code does not play tic tac toe optimally. Please look at the minimax algorithm within the Python code, or Joydeep-Undergraduate-Research-AI, to debug why it's not doing so. I've also provided a tutorial about how minimax works and the pseudocode I followed under the downloads/links inside the Joydeep-Undergraduate-Research-AI repo. Through the print statements, you can see it trying different game states to see what's the optimal path, but it always just ends up choosing the next available free position, or next square.
