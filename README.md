@@ -4,7 +4,7 @@ This repo handles the GUI side for Joydeep's undergraduate research project; als
 
 ## Downloads
 **ZeroMQ/ZMQ** - Platform to connect C++ code to Python code
-[ZeroMQ download](http://zeromq.org/area:download)
+[[ZeroMQ download]](http://zeromq.org/area:download)
 
 ## Documentation
 
